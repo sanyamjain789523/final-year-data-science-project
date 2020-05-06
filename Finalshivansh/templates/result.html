@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Emission Results</title>
+   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
+   <style>
+      body {
+         margin: 0px;
+         padding: 0px;
+         font-family: 'Baloo Bhaina 2', cursive;
+         color: white;
+         background: url('/static/img/result.jpg');
+         background-repeat: no-repeat;
+         background-size: 1400px 750px;
+      }
+
+      .container {
+         /* border: 2px solid red; */
+         width: 33%;
+         margin: 30px;
+         padding: 70px;
+         position: absolute;
+         top: 50px;
+      }
+
+      .header {
+         border: 2px solid green;
+         text-align: center;
+         font-size: xx-large;
+         border-radius: 10px;
+      }
+
+      /* .group {
+         border: 2px solid yellow;
+      } */
+
+      /* .box {
+         border: 2px solid grey;
+      } */
+
+      div.box {
+         display: inline-block;
+         border: 2px solid black;
+         margin: 2px;
+         width: 33%;
+         text-align: center;
+         background: rgb(138, 170, 206);
+         border-radius: 10px;
+      }
+      div.item{
+         /* border: 2px solid white; */
+         display:inline-block;
+         font-size: x-large;
+         margin: 9px;
+         width:50%
+
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <header class="header">
+         Predicted Emissions
+      </header>
+      <ul class='group'>
+         <li><div class="item">Hydro Carbons</div> 
+            <div class='box'>{{HC}}</div>
+         </li>
+         <li><div  class='item'>Carbon Monoxide</div><div class='box'>{{CO}}</div></li>
+         <li><div class='item'>Carbon Dioxide</div><div class='box'>{{CO2}}</div></li>
+         <li><div class='item'>Oxygen</div><div class='box'>{{O2}}</div></li>
+         <li><div class='item'>Nox</div><div class='box'>{{Nox}}</div></li>
+      </ul>
+   </div>
+   <!-- <h1>HC:-{{HC}}<br />
+      CO:-{{CO}}<br />
+      CO2:-{{CO2}}<br />
+      O2:-{{O2}}<br />
+      Nox:-{{Nox}}</h1> -->
+</body>
+
+</html>

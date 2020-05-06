@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Welcome</title>
+   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
+   <style>
+      body {
+         margin: 0px;
+         padding: 0px;
+         color: white;
+         /* background-image: url('   {{ url_for('static', filename='img/bg.jpg') }}   '); */
+         background: url('/static/img/bg.jpg');
+         background-repeat: no-repeat;
+         background-size: 1400px 750px;
+         font-family: 'Baloo Bhaina 2', cursive
+      }
+
+      /* form{
+         color:rgb(237, 252, 252);
+         
+      } */
+      .left {
+         /* border: 2px solid red; */
+         display: inline-block;
+         position: absolute;
+         left: 34px;
+         top: 22px;
+      }
+
+      .left img {
+         width: 70px;
+      }
+
+      .mid {
+         /* border: 2px solid black; */
+         display: block;
+         width: 33%;
+         margin: 22px auto;
+         text-align: center;
+         font-size: xx-large;
+      }
+
+      .mid:hover {
+         background-color: rgb(186, 191, 216);
+      }
+
+      .bottom-right {
+         /* border: 2px solid green; */
+         display: inline-block;
+         position: absolute;
+         right: 34px;
+         top: 600px;
+      }
+
+      .container {
+         border: 2px solid white;
+         margin: 24px 410px;
+         padding: 45px 75px;
+         width: 33%;
+         border-radius: 23px;
+
+      }
+
+      .btn {
+         color: white;
+         background-color: rgb(242, 248, 205);
+         padding: 3px 4px;
+         border: 2px solid grey;
+         border-radius: 10px;
+         font-size: 20px;
+         cursor: pointer;
+         display: block;
+         width: 75%;
+         margin: auto;
+         color: black;
+      }
+
+      .btn:hover {
+         background-color: grey;
+      }
+
+      .form-group input {
+         text-align: center;
+         display: block;
+         width: 314px;
+         padding: 7px;
+         border: 2px solid black;
+         border-radius: 10px;
+         margin: 3px auto;
+         font-size: 15px;
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <div class='left'>
+         <img src="/static/img/logo_main.png" alt="">
+      </div>
+      <div class='mid'>
+         Emission Calculator
+      </div>
+   </header>
+   <footer>
+      <div class='bottom-right'>
+         Website created by Shivansh Khurana
+      </div>
+   </footer>
+   <!-- <div>
+      <form action="http://localhost:5000/result" method="POST">
+         <p>Type <input type="text" name="T" /></p>
+         <p>Blend <input type="text" name="B" /></p>
+         <p>Compression ratio <input type="text" name="CR" /></p>
+         <p>Load(in kg) <input type="text" name="L" /></p>
+         <p><input type="submit" value="Submit" /></p>
+      </form>
+   </div> -->
+   <div class="container">
+      <form action="http://localhost:5000/result" method="POST">
+         <div class="form-group"><input type="text" name="T" placeholder="Type" /></div>
+         <div class="form-group"><input type="text" name="B" placeholder="Blend" /></div>
+         <div class="form-group"><input type="text" name="CR" placeholder="Compression ratio" /></div>
+         <div class="form-group"><input type="text" name="L" placeholder="Load(in KG)" /></div>
+         <div><button class="btn">Submit</button></div>
+
+
+
+
+      </form>
+   </div>
+</body>
+
+</html>
